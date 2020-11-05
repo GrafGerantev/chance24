@@ -41,6 +41,22 @@
 }
 
 @font-face {
+	font-family: "Exo2";
+	src: url("../fonts/Exo2-SemiBold.woff2") format("woff2"), url("../fonts/Exo2-SemiBold.woff") format("woff");
+	font-weight: 800;
+	font-style: normal;
+	font-display: swap;
+}
+
+@font-face {
+	font-family: "Exo2";
+	src: url("../fonts/Exo2-Black.woff2") format("woff2"), url("../fonts/Exo2-Black.woff") format("woff");
+	font-weight: 900;
+	font-style: normal;
+	font-display: swap;
+}
+
+@font-face {
 	font-family: "SFProDisplay";
 	src: url("../fonts/SFProDisplay-Regular.woff2") format("woff2"),
 		url("../fonts/SFProDisplay-Regular.woff") format("woff");

@@ -1,0 +1,57 @@
+.intro
+	background: url(../images/bg/intro-bg.jpg) no-repeat
+	background-size: cover
+	background-position-x: -126px
+	padding: 40px 0 120px
+	&__title
+		color: $bg-color-blue--dark
+		margin-bottom: 20px
+		line-height: 44px
+		font-size: 41px
+		font-weight: 900
+		max-width: 900px
+		width: 100%
+		letter-spacing: 2px
+		text-transform: uppercase
+	&__subtitle
+		color: #0a9adc
+		font-size: 32px
+		margin-bottom: 22px
+		line-height: 49px
+		span
+			color: #b22222
+			font-family: "SFProDisplay", sans-serif
+	&__appeal
+		color: $bg-color-blue--dark
+		font-size: 24px
+		line-height: 36px
+		margin-bottom: 24px
+	&__list
+		margin-bottom: 40px
+	&__item
+		font-size: 18px
+		line-height: 27px
+		color: $bg-color-blue--dark
+		padding-left: 24px
+		margin-bottom: 10px
+		position: relative
+		&::before
+			content: ""
+			width: 16px
+			height: 16px
+			position: absolute
+			top: 50%
+			left: 0
+			transform: translateY(-50%)
+			background: url('../images/icons/icon-check.svg') no-repeat
+
+.intro__radius
+	box-shadow: 0 8px 40px rgba(0,0,0,.1)
+	position: relative
+	z-index: 30
+
+.overflow
+	overflow: hidden
+
+.intro2
+	min-height: 500px
