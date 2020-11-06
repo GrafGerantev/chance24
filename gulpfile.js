@@ -124,7 +124,7 @@ function cssConcat() {
 			//'src/assets/css/animate.css',
 			//'src/assets/css/tiltedpage-scroll.css',
 			/*'src/css/fontello.css',*/
-			/*'src/css/jquery.fancybox.min.css',*/
+			//'#src/assets/css/jquery.fancybox.min.css',
 			'node_modules/animate.css/animate.css',
 			//'node_modules/@fancyapps/fancybox/dist/jquery.fancybox.css',
 
@@ -157,6 +157,7 @@ function js() {
 function jsConcat() {
 	return gulp.src([ // Берем все необходимые библиотеки
 			'#src/assets/js/jquery.min.js',
+			'#src/assets/js/jquery.fancybox.min.js',
 			//'node_modules/selectize/dist/js/standalone/selectize.js',
 			//'src/assets/js/tooltipster.bundle.min.js',
 			//'node_modules/jquery-validation/dist/jquery.validate.min.js',

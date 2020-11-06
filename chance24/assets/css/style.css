@@ -5237,27 +5237,18 @@ button {
   background-image: linear-gradient(to right, #0093d8 0, #4ac7f4 100%);
 }
 
-.consultation-btn {
-  width: 310px;
-  height: 70px;
-  background-image: -webkit-gradient(linear, right top, left top, color-stop(0, #0093d8), to(#4ac7f4));
-  background-image: -o-linear-gradient(right, #0093d8 0, #4ac7f4 100%);
-  background-image: linear-gradient(to left, #0093d8 0, #4ac7f4 100%);
+.main-btn {
   border-radius: 35px;
   text-shadow: 0.7px 1.9px 2px rgba(0, 0, 0, 0.2);
   font-size: 24px;
   font-weight: 700;
-  color: #fff;
   line-height: 68px;
   position: relative;
-  -webkit-transition: .3s;
-  -o-transition: .3s;
-  transition: .3s;
   top: 0;
   padding: 0 10px;
 }
 
-.consultation-btn img {
+.main-btn img {
   display: inline-block;
   width: 22px;
   height: 22px;
@@ -5266,10 +5257,19 @@ button {
           transform: translateY(4px);
 }
 
+.main-btn--small {
+  width: 310px;
+  height: 70px;
+}
+
+.video-btn {
+  width: 285px;
+  height: 70px;
+}
+
 .intro {
   background: url(../images/bg/intro-bg.jpg) no-repeat;
   background-size: cover;
-  background-position-x: -126px;
   padding: 40px 0 120px;
 }
 
@@ -5337,25 +5337,6 @@ button {
   z-index: 30;
 }
 
-.overflow {
-  overflow: hidden;
-}
-
-.intro2 {
-  min-height: 500px;
-}
-
-.radius__section {
-  overflow: hidden;
-  width: 100%;
-  width: calc(100% + 600px);
-  padding: 0 300px;
-  margin-left: -300px;
-  border-bottom-left-radius: 3000px 400px;
-  border-bottom-right-radius: 3000px 400px;
-  margin-bottom: -60px;
-}
-
 .line__bg {
   position: relative;
   padding: 20px 15px 24px;
@@ -5382,6 +5363,83 @@ button {
           transform: rotate(180deg);
   bottom: 0;
   left: 0;
+}
+
+.line__bg--revers::before {
+  -webkit-transform: rotate(180deg);
+      -ms-transform: rotate(180deg);
+          transform: rotate(180deg);
+}
+
+.line__bg--revers::after {
+  -webkit-transform: rotate(0);
+      -ms-transform: rotate(0);
+          transform: rotate(0);
+}
+
+.section1 {
+  padding: 63px 0 90px;
+  background: url(../images/bg/section1-bg.jpg) center center/cover no-repeat;
+}
+
+.section1__inner {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.section1__title {
+  font-size: 28px;
+  color: #0a9adc;
+  font-weight: 900;
+  line-height: 36px;
+  text-transform: uppercase;
+}
+
+.section1__subtitle {
+  font-size: 24px;
+  color: #14355d;
+  margin: 45px 0;
+  font-weight: 400;
+}
+
+.section1-mac {
+  position: relative;
+}
+
+.mac-video {
+  width: 524px;
+  height: 272px;
+  position: absolute;
+  top: 27px;
+  left: 50%;
+  -webkit-transform: translateX(-50%);
+      -ms-transform: translateX(-50%);
+          transform: translateX(-50%);
+}
+
+.macbook-bg {
+  max-width: 716px;
+  display: block;
+  height: auto;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+
+.macbook-bg {
+  max-width: 597px;
+}
+
+.mac-video {
+  width: 440px;
+  height: 287px;
+  top: 16px;
 }
 
 @media (max-width: 1129px) {
@@ -5412,6 +5470,43 @@ button {
 
   .header__callback-inner {
     margin: 0 30px;
+  }
+
+  .intro {
+    background-position-x: -634px;
+  }
+}
+
+@media (max-width: 1030px) {
+  .section1__title {
+    font-size: 24px;
+  }
+}
+
+@media (max-width: 943px) {
+  .section1__inner {
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    text-align: center;
+  }
+
+  .section1__subtitle {
+    margin: 23px 0;
+  }
+
+  .section1-mac {
+    padding-top: 20px;
+  }
+
+  .section1__col .video-btn {
+    margin: 0 auto;
+  }
+
+  .mac-video {
+    top: 35px;
   }
 }
 
@@ -5522,6 +5617,15 @@ button {
   .intro__subtitle {
     font-size: 20px;
   }
+
+  .macbook-bg {
+    max-width: 480px;
+  }
+
+  .mac-video {
+    width: 350px;
+    height: 223px;
+  }
 }
 
 @media (max-width: 600px) {
@@ -5549,6 +5653,15 @@ button {
     padding-left: 0;
     padding-right: 0;
   }
+
+  .macbook-bg {
+    max-width: 400px;
+  }
+
+  .mac-video {
+    width: 293px;
+    height: 181px;
+  }
 }
 
 @media (max-width: 420px) {
@@ -5558,19 +5671,36 @@ button {
 
   .intro__subtitle {
     font-size: 12px;
+    line-height: 18px;
   }
 
   .intro__appeal {
     font-size: 18px;
   }
 
-  .line__bg {
-    padding-top: 0;
-    padding-bottom: 0;
-  }
-
   .consultation-btn {
     width: 100%;
+  }
+
+  .section1 {
+    padding: 50px 0;
+  }
+
+  .section1__title {
+    font-size: 18px;
+  }
+
+  .section1__subtitle {
+    font-size: 18px;
+  }
+
+  .macbook-bg {
+    max-width: 318px;
+  }
+
+  .mac-video {
+    width: 234px;
+    height: 145px;
   }
 }
 
