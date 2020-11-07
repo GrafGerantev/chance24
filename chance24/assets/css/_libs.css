@@ -497,6 +497,24 @@ template {
 	font-style: normal;
 	font-display: swap;
 }
+
+@font-face {
+	font-family: "DaysSans-Black";
+	src: url("../fonts/DaysSans-Black.woff2") format("woff2"),
+		url("../fonts/SFProDisplay-Semibold.woff") format("woff");
+	font-weight: 900;
+	font-style: normal;
+	font-display: swap;
+}
+
+@font-face {
+	font-family: "DaysSans-Black";
+	src: url("../fonts/DaysSans-Black.woff2") format("woff2"),
+		url("../fonts/SFProDisplay-Semibold.woff") format("woff");
+	font-weight: 900;
+	font-style: normal;
+	font-display: swap;
+}
 /* Slider */
 .slick-slider
 {

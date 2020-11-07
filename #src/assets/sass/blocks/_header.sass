@@ -1,5 +1,17 @@
 .header
 	padding: 13px
+	width: 100%
+	position: relative
+	z-index: 100
+	background-color: $bg-color-white
+
+	&--fixed
+		position: fixed
+		top: 0
+		left: 0
+		opacity: 1
+		box-shadow: 0 8px 45px 5px rgba(0,0,0,.15)
+		animation: smoothScroll 1s forwards
 	&__logo
 		max-width: 195px
 		width: 100%
@@ -70,3 +82,9 @@
 			background: #2F3035
 			border-radius: 3px
 			margin: 8px 0
+@keyframes smoothScroll
+	0%
+		transform: translateY(-138px)
+
+	100%
+		transform: translateY(0px)

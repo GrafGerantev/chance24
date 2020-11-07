@@ -1,0 +1,54 @@
+.section2
+	padding: 85px 0 60px
+	.title
+		margin-bottom: 70px
+
+.newlife
+	&__list
+		counter-reset: list
+	&__item
+		padding-left: 100px
+		margin-bottom: 40px
+	&__title
+		font-size: 24px
+		font-weight: 700
+		color: #0a9adc
+		position: relative
+		margin-bottom: 12px
+		padding-bottom: 14px
+		&::before
+			counter-increment: list
+			content: counter(list) ". "
+			display: inline-block
+			color: #0a9adc
+			font-size: 36px
+			font-family: $font-daysSans
+			vertical-align: top
+			margin-top: -2px
+			position: absolute
+			right: 100%
+			margin-right: 15px
+			top: 0
+		&::after
+			content: ""
+			width: 700px
+			height: 1px
+			position: absolute
+			background: url(../images/bg/line-blur-bg.png) center center no-repeat
+			display: block
+			transform: translateX(-50%)
+			bottom: 0
+	&__text
+		font-size: 16px
+		color: $bg-color-blue--dark
+		margin-bottom: 15px
+	&__price
+		font-family: $font-daysSans
+		color: $bg-color-blue--dark
+		text-align: right
+		font-size: 22px
+		text-transform: capitalize
+		span
+			font-size: 24px
+			line-height: 1.5
+			color: #0a9adc

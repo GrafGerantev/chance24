@@ -501,6 +501,22 @@ template {
   font-display: swap;
 }
 
+@font-face {
+  font-family: "DaysSans-Black";
+  src: url("../fonts/DaysSans-Black.woff2") format("woff2"), url("../fonts/SFProDisplay-Semibold.woff") format("woff");
+  font-weight: 900;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "DaysSans-Black";
+  src: url("../fonts/DaysSans-Black.woff2") format("woff2"), url("../fonts/SFProDisplay-Semibold.woff") format("woff");
+  font-weight: 900;
+  font-style: normal;
+  font-display: swap;
+}
+
 /* Slider */
 
 .slick-slider {
@@ -5094,6 +5110,21 @@ body {
 
 .header {
   padding: 13px;
+  width: 100%;
+  position: relative;
+  z-index: 100;
+  background-color: #ffffff;
+}
+
+.header--fixed {
+  position: fixed;
+  top: 0;
+  left: 0;
+  opacity: 1;
+  -webkit-box-shadow: 0 8px 45px 5px rgba(0, 0, 0, 0.15);
+          box-shadow: 0 8px 45px 5px rgba(0, 0, 0, 0.15);
+  -webkit-animation: smoothScroll 1s forwards;
+          animation: smoothScroll 1s forwards;
 }
 
 .header__logo {
@@ -5199,6 +5230,30 @@ body {
   margin: 8px 0;
 }
 
+@-webkit-keyframes smoothScroll {
+  0% {
+    -webkit-transform: translateY(-138px);
+            transform: translateY(-138px);
+  }
+
+  100% {
+    -webkit-transform: translateY(0px);
+            transform: translateY(0px);
+  }
+}
+
+@keyframes smoothScroll {
+  0% {
+    -webkit-transform: translateY(-138px);
+            transform: translateY(-138px);
+  }
+
+  100% {
+    -webkit-transform: translateY(0px);
+            transform: translateY(0px);
+  }
+}
+
 button {
   background: transparent;
   border: none;
@@ -5277,9 +5332,10 @@ button {
   color: #14355d;
   margin-bottom: 20px;
   line-height: 44px;
-  font-size: 41px;
+  font-size: 39px;
+  font-family: "DaysSans-Black", sans-serif;
   font-weight: 900;
-  max-width: 900px;
+  max-width: 953px;
   width: 100%;
   letter-spacing: 2px;
   text-transform: uppercase;
@@ -5377,6 +5433,15 @@ button {
           transform: rotate(0);
 }
 
+.title {
+  font-size: 36px;
+  font-family: "DaysSans-Black", sans-serif;
+  font-weight: 900;
+  color: #14355d;
+  text-align: center;
+  line-height: 1.5;
+}
+
 .section1 {
   padding: 63px 0 90px;
   background: url(../images/bg/section1-bg.jpg) center center/cover no-repeat;
@@ -5397,6 +5462,7 @@ button {
 .section1__title {
   font-size: 28px;
   color: #0a9adc;
+  font-family: "DaysSans-Black", sans-serif;
   font-weight: 900;
   line-height: 36px;
   text-transform: uppercase;
@@ -5430,6 +5496,80 @@ button {
   height: auto;
   -o-object-fit: cover;
      object-fit: cover;
+}
+
+.section2 {
+  padding: 85px 0 60px;
+}
+
+.section2 .title {
+  margin-bottom: 70px;
+}
+
+.newlife__list {
+  counter-reset: list;
+}
+
+.newlife__item {
+  padding-left: 100px;
+  margin-bottom: 40px;
+}
+
+.newlife__title {
+  font-size: 24px;
+  font-weight: 700;
+  color: #0a9adc;
+  position: relative;
+  margin-bottom: 12px;
+  padding-bottom: 14px;
+}
+
+.newlife__title::before {
+  counter-increment: list;
+  content: counter(list) ". ";
+  display: inline-block;
+  color: #0a9adc;
+  font-size: 36px;
+  font-family: "DaysSans-Black", sans-serif;
+  vertical-align: top;
+  margin-top: -2px;
+  position: absolute;
+  right: 100%;
+  margin-right: 15px;
+  top: 0;
+}
+
+.newlife__title::after {
+  content: "";
+  width: 700px;
+  height: 1px;
+  position: absolute;
+  background: url(../images/bg/line-blur-bg.png) center center no-repeat;
+  display: block;
+  -webkit-transform: translateX(-50%);
+      -ms-transform: translateX(-50%);
+          transform: translateX(-50%);
+  bottom: 0;
+}
+
+.newlife__text {
+  font-size: 16px;
+  color: #14355d;
+  margin-bottom: 15px;
+}
+
+.newlife__price {
+  font-family: "DaysSans-Black", sans-serif;
+  color: #14355d;
+  text-align: right;
+  font-size: 22px;
+  text-transform: capitalize;
+}
+
+.newlife__price span {
+  font-size: 24px;
+  line-height: 1.5;
+  color: #0a9adc;
 }
 
 .macbook-bg {
@@ -5480,6 +5620,18 @@ button {
 @media (max-width: 1030px) {
   .section1__title {
     font-size: 24px;
+  }
+
+  .title {
+    font-size: 26px;
+  }
+
+  .section2 {
+    padding-top: 32px;
+  }
+
+  .newlife__title::before {
+    font-size: 26px;
   }
 }
 
@@ -5626,6 +5778,22 @@ button {
     width: 350px;
     height: 223px;
   }
+
+  .section1 {
+    padding-bottom: 77px;
+  }
+
+  .newlife__item {
+    padding-left: 50px;
+  }
+
+  .newlife__title::after {
+    width: 100%;
+  }
+
+  .newlife__price {
+    text-align: center;
+  }
 }
 
 @media (max-width: 600px) {
@@ -5661,6 +5829,22 @@ button {
   .mac-video {
     width: 293px;
     height: 181px;
+  }
+
+  .newlife__title {
+    font-size: 22px;
+  }
+
+  .newlife__title::before {
+    font-size: 22px;
+  }
+
+  .newlife__price {
+    font-size: 20px;
+  }
+
+  .newlife__price span {
+    font-size: 20px;
   }
 }
 
@@ -5701,6 +5885,27 @@ button {
   .mac-video {
     width: 234px;
     height: 145px;
+  }
+
+  .main-btn--small {
+    width: 100%;
+  }
+
+  .section2 .title {
+    font-size: 18px;
+    margin-bottom: 20px;
+  }
+
+  .newlife__item {
+    padding-left: 30px;
+  }
+
+  .newlife__price {
+    font-size: 16px;
+  }
+
+  .newlife__price span {
+    font-size: 18px;
   }
 }
 
