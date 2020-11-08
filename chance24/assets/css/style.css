@@ -5100,6 +5100,7 @@ body {
   font-size: 14px;
   line-height: 22px;
   font-weight: 400;
+  margin: 0;
 }
 
 .container {
@@ -5572,6 +5573,215 @@ button {
   color: #0a9adc;
 }
 
+.section3 {
+  padding: 20px 0;
+}
+
+.section3__subtitle {
+  color: #777777;
+  line-height: 1.5;
+  padding: 10px 0;
+  font-family: "DaysSans-Black", sans-serif;
+  text-align: center;
+  margin: 0 auto;
+  font-size: 16px;
+  text-transform: uppercase;
+}
+
+.comfortlive {
+  padding: 10px 0 60px;
+}
+
+.comfortlive__title {
+  font-size: 26px;
+  font-weight: 700;
+  line-height: 1.5;
+  color: #14355d;
+  margin-bottom: 50px;
+  text-align: center;
+}
+
+.comfortlive__items {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+.comfortlive__item {
+  padding: 7px 15px 25px 15px;
+  margin: 0 5px;
+  width: calc(20% - 10px);
+  background: #ffffff;
+  border-radius: 5px;
+  -webkit-box-shadow: 0 10px 30px rgba(77, 77, 77, 0.1);
+          box-shadow: 0 10px 30px rgba(77, 77, 77, 0.1);
+  -webkit-transition: .3s;
+  -o-transition: .3s;
+  transition: .3s;
+  position: relative;
+  top: 0;
+}
+
+.comfortlive__item:hover {
+  -webkit-box-shadow: 0 10px 30px rgba(77, 77, 77, 0.1), inset 0 0 0 1px #99dfff;
+          box-shadow: 0 10px 30px rgba(77, 77, 77, 0.1), inset 0 0 0 1px #99dfff;
+  top: -10px;
+}
+
+.comfortlive__img {
+  height: 105px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  margin-bottom: 22px;
+  position: relative;
+}
+
+.comfortlive__img::before {
+  content: "";
+  width: 40px;
+  height: 3px;
+  background-image: -webkit-gradient(linear, right top, left top, color-stop(0, #0093d8), to(#4ac7f4));
+  background-image: -o-linear-gradient(right, #0093d8 0, #4ac7f4 100%);
+  background-image: linear-gradient(to left, #0093d8 0, #4ac7f4 100%);
+  border-radius: 2px;
+  position: absolute;
+  left: 50%;
+  bottom: 0;
+  -webkit-transform: translateX(-50%);
+      -ms-transform: translateX(-50%);
+          transform: translateX(-50%);
+}
+
+.comfortlive__img img {
+  display: block;
+  -o-object-fit: cover;
+     object-fit: cover;
+  max-width: 77px;
+  margin: 0 auto;
+}
+
+.comfortlive__text {
+  font-size: 18px;
+  font-weight: 500;
+  text-align: center;
+  color: #0a9adc;
+}
+
+.section4 {
+  padding: 50px 0 20px 0;
+}
+
+.section4__subtitle {
+  font-size: 18px;
+  line-height: 1.5;
+  padding-top: 17px;
+  padding-bottom: 10px;
+  color: #14355d;
+  text-align: center;
+  margin-bottom: 40px;
+  font-family: "DaysSans-Black", sans-serif;
+}
+
+.section4 .main-btn {
+  margin: 0 auto;
+}
+
+.history-patient__item {
+  font-size: 18px;
+  line-height: 22px;
+  width: 70%;
+  margin: 0 auto 60px auto;
+}
+
+.history-patient__name {
+  text-transform: uppercase;
+  color: #029ad7;
+  margin-bottom: 8px;
+  letter-spacing: 0.6px;
+}
+
+.history-patient__experience {
+  color: #9b3b3d;
+}
+
+.history-patient__result {
+  color: #31a945;
+}
+
+.history-patient__result span {
+  border-bottom: 1px solid #31a945;
+}
+
+.history-patient__phrase {
+  font-size: 16px;
+  color: #242323;
+  padding: 16px 26px 19px 27px;
+  background-color: #f2f2f2;
+  margin-top: 15px;
+}
+
+.section5 {
+  padding: 40px 0 40px;
+}
+
+.acquisition {
+  padding-top: 60px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.acquisition__items {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+}
+
+.acquisition__item {
+  padding-left: 30px;
+  padding-right: 30px;
+  margin-bottom: 30px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  width: 49.5%;
+}
+
+.acquisition__img {
+  display: inline-block;
+  max-width: 51px;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+
+.acquisition__text {
+  padding-left: 37px;
+  color: #252525;
+  font-size: 18px;
+  line-height: 1.2;
+}
+
 .macbook-bg {
   max-width: 597px;
 }
@@ -5633,6 +5843,10 @@ button {
   .newlife__title::before {
     font-size: 26px;
   }
+
+  .section4 {
+    padding-top: 15px;
+  }
 }
 
 @media (max-width: 943px) {
@@ -5660,6 +5874,10 @@ button {
   .mac-video {
     top: 35px;
   }
+
+  .section2 {
+    padding-bottom: 20px;
+  }
 }
 
 @media (max-width: 830px) {
@@ -5671,6 +5889,30 @@ button {
   .intro__subtitle {
     font-size: 30px;
     margin-bottom: 12px;
+  }
+
+  .comfortlive__items {
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+  }
+
+  .comfortlive__item {
+    width: 46%;
+    margin: 0 10px 20px 10px;
+    min-height: 210px;
+  }
+
+  .acquisition__items {
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+  }
+
+  .acquisition__item {
+    width: 80%;
   }
 }
 
@@ -5763,6 +6005,14 @@ button {
     line-height: 28px;
     letter-spacing: 0;
   }
+
+  .section3__subtitle {
+    font-size: 14px;
+  }
+
+  .comfortlive__title {
+    font-size: 20px;
+  }
 }
 
 @media (max-width: 660px) {
@@ -5794,6 +6044,10 @@ button {
   .newlife__price {
     text-align: center;
   }
+
+  .history-patient__item {
+    width: 100%;
+  }
 }
 
 @media (max-width: 600px) {
@@ -5805,6 +6059,24 @@ button {
   .header__callback-consultation {
     margin-bottom: 5px;
     font-size: 14px;
+  }
+
+  .comfortlive__title {
+    margin-bottom: 30px;
+  }
+
+  .comfortlive__item {
+    width: 45%;
+    padding-right: 5px;
+    padding-left: 5px;
+  }
+
+  .acquisition {
+    padding-top: 30px;
+  }
+
+  .acquisition__item {
+    width: 100%;
   }
 }
 
@@ -5845,6 +6117,14 @@ button {
 
   .newlife__price span {
     font-size: 20px;
+  }
+
+  .comfortlive {
+    padding-bottom: 20px;
+  }
+
+  .comfortlive__item {
+    width: 80%;
   }
 }
 
@@ -5891,6 +6171,10 @@ button {
     width: 100%;
   }
 
+  .title {
+    font-size: 18px;
+  }
+
   .section2 .title {
     font-size: 18px;
     margin-bottom: 20px;
@@ -5906,6 +6190,28 @@ button {
 
   .newlife__price span {
     font-size: 18px;
+  }
+
+  .comfortlive__item {
+    width: 100%;
+  }
+
+  .section4__subtitle {
+    font-size: 14px;
+  }
+
+  .acquisition {
+    padding: 16px 0;
+  }
+
+  .acquisition__item {
+    margin-bottom: 20px;
+  }
+
+  .acquisition__text {
+    text-align: center;
+    font-size: 14px;
+    padding-left: 20px;
   }
 }
 
