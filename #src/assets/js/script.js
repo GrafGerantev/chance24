@@ -10,6 +10,10 @@ $(function () {
 
 	});
 
+	$('[data-fancybox="gallery"]').fancybox({
+		// Options will go here
+	});
+
 /* 	$(window).on('scroll',function () {
 
 
