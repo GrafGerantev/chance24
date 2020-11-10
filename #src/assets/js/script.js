@@ -25,4 +25,11 @@ $(function () {
 			}
 	}); */
 
+
+	$('.appeal__item').hover(function() {
+			$('.appeal__img svg').addClass('animate__animated animate__zoomIn');
+	}, function() {
+			$('.appeal__img svg').removeClass('animate__animated animate__zoomIn');
+	});
+
 });

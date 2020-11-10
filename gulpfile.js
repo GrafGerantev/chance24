@@ -125,7 +125,7 @@ function cssConcat() {
 			//'src/assets/css/tiltedpage-scroll.css',
 			/*'src/css/fontello.css',*/
 			/* '#src/assets/css/jquery.fancybox.css', */
-			//'node_modules/animate.css/animate.css',
+			'node_modules/animate.css/animate.css',
 			//'node_modules/@fancyapps/fancybox/dist/jquery.fancybox.css',
 
 
