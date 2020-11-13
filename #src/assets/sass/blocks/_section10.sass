@@ -1,0 +1,115 @@
+.section10
+	padding: 62px 0 40px
+	background: url(../images/bg/section10-bg.jpg) center center/cover no-repeat
+	min-height: 748px
+	overflow: hidden
+.branches
+	&__inner
+		display: flex
+		justify-content: space-between
+		position: relative
+	&__lists
+		max-width: 327px
+		width: 100%
+		padding: 0 15px
+		display: flex
+		justify-content: space-between
+	&__list
+		&-link
+			display: block
+			font-size: 16px
+			padding: 5px 0
+			color: $bg-color-blue--dark
+			transition: all .3s linear
+			position: relative
+			&:hover
+				color: #0a9adc
+				transform: translateX(8px)
+				text-decoration: underline
+				&::before
+					opacity: 1
+			&::before
+				content: ""
+				width: 10px
+				height: 12px
+				background: url('../images/icons/icon-chevron-right-blue.svg') no-repeat
+				position: absolute
+				left: -15px
+				top: 10px
+				opacity: 0
+	&-map
+		position: relative
+		width: 100%
+		&__inner
+			width: 120%
+			position: absolute
+			top: -60px
+			left: 0
+			&-img
+				width: 100%
+				object-fit: cover
+				display: block
+
+.pin
+	position: absolute
+	top: 0
+	left: 0
+	img
+		display: block
+		width: 14px
+	&-content
+		position: absolute
+		background-color: #fff
+		box-shadow: 0 10px 20px rgba(58,58,58,.16)
+		border: 2px solid #1081e0
+		border-radius: 5px
+		padding: 12px
+		bottom: 100%
+		margin-bottom: 7px
+		opacity: 0
+		filter: alpha(opacity=0)
+		transform: translateY(-20px)
+		transition: .2s
+		transform-style: preserve-3d
+		left: 0
+		z-index: 10
+		width: auto
+		&::before
+			content: ""
+			background: url('../images/icons/icon-angle.png') no-repeat
+			width: 24px
+			height: 25px
+			position: absolute
+			left: 12px
+			bottom: -19px
+		&__text
+			font-size: 14px
+			font-weight: 700
+			color: $bg-color-blue--dark
+			margin-bottom: 5px
+		&__phone
+			font-size: 13px
+			color: #0a9adc
+		&__mail
+			font-size: 13px
+			color: #0a9adc
+
+.pin
+	position: absolute
+	top: 100px
+	filter: drop-shadow(4.2px 5.6px 10px rgba(0, 0, 0, .16))
+	transform: translate(-50%,-100%)
+	z-index: 100
+.pin.mc
+	top: 42%
+	left: 14.5%
+.pin.sp
+	top: 28%
+	left: 16%
+.pin.sh
+	top: 44%
+	left: 14%
+
+.marker:hover + .pin-content
+	opacity: 0
+	transform: translateY(0) translateZ(2px)

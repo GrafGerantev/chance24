@@ -27,9 +27,64 @@ $(function () {
 
 
 	$('.appeal__item').hover(function() {
-			$('.appeal__img svg').addClass('animate__animated animate__zoomIn');
+			$(this).find('.appeal__img svg').addClass('animate__animated animate__zoomIn');
 	}, function() {
-			$('.appeal__img svg').removeClass('animate__animated animate__zoomIn');
+			$(this).find('.appeal__img svg').removeClass('animate__animated animate__zoomIn');
+	});
+
+
+	function validateForms(form){
+			$(form).validate({
+					rules: {
+							name: {
+									required: true
+							},
+							phone: "required",
+					},
+					messages: {
+							name: {
+									required: "Пожалуйста, введите свое имя",
+									minlength: jQuery.validator.format("Введите {0} символа!")
+								},
+							phone: "Пожалуйста, введите свой номер телефона",
+					}
+			});
+	};
+
+	validateForms('#consultation-form');
+
+	$('input[name=phone]').mask("+7 (999) 999-99-99");
+
+
+	$('.video-reviews__slider').slick({
+			slidesToShow: 3,
+			slidesToScroll: 1,
+			dots: true,
+			prevArrow: '<button class="video-reviews__slider-btn video-reviews__slider-btnprev"><img src = "assets/images/icons/icon-arrowLeft.svg"></button>',
+			nextArrow: '<button class="video-reviews__slider-btn video-reviews__slider-btnnext"><img src = "assets/images/icons/icon-arrowRight.svg"></button>',
+			responsive: [{
+				breakpoint: 831,
+				settings: {
+					arrows: false,
+				}
+			},
+			{				
+				breakpoint: 665,
+				settings: {
+					slidesToShow: 2,
+				arrows: false,
+				}
+			},
+
+			{				
+				breakpoint: 524,
+				settings: {
+					slidesToShow: 1,
+				arrows: false,
+				}
+			},
+
+		],
 	});
 
 });

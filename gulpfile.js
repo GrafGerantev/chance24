@@ -158,6 +158,7 @@ function jsConcat() {
 	return gulp.src([ // Берем все необходимые библиотеки
 			'#src/assets/js/jquery.min.js',
 			'#src/assets/js/jquery.fancybox.min.js',
+			'#src/assets/js/jquery.maskedinput.min.js',
 			//'node_modules/selectize/dist/js/standalone/selectize.js',
 			//'src/assets/js/tooltipster.bundle.min.js',
 			//'node_modules/jquery-validation/dist/jquery.validate.min.js',
@@ -167,6 +168,7 @@ function jsConcat() {
 			//'src/assets/js/jquery.vide.js',
 			//'src/assets/js/jquery.tiltedpage-scroll.min.js',
 			'#src/assets/js/slick.js', // Берем jQuery
+			'node_modules/jquery-validation/dist/jquery.validate.min.js',
 			// Берем Magnific Popup
 			//'node_modules/@fancyapps/fancybox/dist/jquery.fancybox.js',
 			//'node_modules/jquery.waitforimages/dist/jquery.waitforimages.js',
