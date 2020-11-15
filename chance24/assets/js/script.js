@@ -87,4 +87,28 @@ $(function () {
 		],
 	});
 
+	$('.centerlife-slider').slick({
+			slidesToShow: 1,
+			slidesToScroll: 1,
+			prevArrow: '<button class="centerlife-slider__slider-btn centerlife-slider__slider-btnprev"><img src = "assets/images/icons/icon-arrowLeft.svg"></button>',
+			nextArrow: '<button class="centerlife-slider__slider-btn centerlife-slider__slider-btnnext"><img src = "assets/images/icons/icon-arrowRight.svg"></button>',
+			asNavFor: '.centerlife-bottom__slider',
+			responsive: [{
+							breakpoint: 873,
+							settings: {
+								arrows: false,
+								dots: true,
+							}
+						},
+
+					],
+	});
+
+	$('.centerlife-bottom__slider').slick({
+			slidesToShow: 5,
+			slidesToScroll: 1,
+			asNavFor: '.centerlife-slider',
+			focusOnSelect: true,
+});
+
 });

@@ -1,0 +1,38 @@
+.section13
+	padding: 62px 0 40px
+
+.rehabilitation
+	&__inner
+		display: flex
+		justify-content: space-between
+		align-items: center
+		flex-wrap: wrap
+	&__item
+		max-width: 265px
+		width: 100%
+		padding: 0 10px
+		text-align: center
+		margin-bottom: 30px
+	&__img
+		position: relative
+		height: 105px
+		margin-bottom: 18px
+		&::before
+			content: ""
+			width: 40px
+			height: 3px
+			background-image: linear-gradient(to left,#0093d8 0,#4ac7f4 100%)
+			border-radius: 2px
+			position: absolute
+			left: 50%
+			bottom: 0
+			transform: translateX(-50%)
+		img
+			display: block
+			position: absolute
+			left: 50%
+			top: 50%
+			transform: translate(-50%, -50%)
+	&__text
+		font-size: 16px
+		color: #0a9adc
