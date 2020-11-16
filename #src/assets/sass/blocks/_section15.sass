@@ -1,0 +1,70 @@
+.section15
+	padding: 62px 0 40px
+
+.centers
+	&__inner
+		display: flex
+		justify-content: space-between
+		max-width: 960px
+		width: 100%
+		margin: 0 auto
+	&-list
+		&__item
+			font-size: 16px
+			font-weight: 300
+			color: $bg-color-blue--dark
+			margin-bottom: 30px
+			&-title
+				padding-left: 25px
+				font-size: 18px
+				font-weight: 500
+				position: relative
+				margin-bottom: 12px
+	&__item
+		max-width: 480px
+		position: relative
+		&-title
+			font-size: 24px
+			font-weight: 700
+			margin-bottom: 30px
+		&--red
+			padding: 15px 25px 15px 15px
+			&::before
+				content: ""
+				position: absolute
+				right: 0
+				top: 0
+				width: 1px
+				height: 100%
+				background-color: #25ade6
+			.centers__item-title
+				color: #3a3a3a
+			.centers-list__item
+				&-title
+					color: #d61212
+					&::before
+						content: ""
+						position: absolute
+						top: 50%
+						transform: translateY(-50%)
+						left: 0
+						background: url('../images/icons/icon-close.svg') no-repeat
+						width: 11px
+						height: 14px
+
+		&--green
+			padding: 15px 15px 15px 25px
+			.centers__item-title
+				color: #0a9adc
+			.centers-list__item
+				&-title
+					color: #87be1d
+					&::before
+						content: ""
+						position: absolute
+						top: 50%
+						transform: translateY(-50%)
+						left: 0
+						background: url('../images/icons/icon-check.svg') no-repeat
+						width: 14px
+						height: 14px
