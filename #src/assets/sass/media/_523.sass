@@ -59,3 +59,23 @@
 	.video-reviews__family
 		.video-reviews__item
 			max-width: 100%
+
+	.centers
+		&__inner
+			display: block
+		&__item
+			&--red
+				padding: 0
+				&::before
+					content: none
+			&-title
+				font-size: 20px
+				margin-bottom: 20px
+			&--green
+				padding: 0
+		&-list__item
+			margin-bottom: 20px
+
+	.warranty
+		&__list
+			width: 100%

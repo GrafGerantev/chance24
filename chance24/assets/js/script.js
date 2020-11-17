@@ -107,8 +107,15 @@ $(function () {
 	$('.centerlife-bottom__slider').slick({
 			slidesToShow: 5,
 			slidesToScroll: 1,
+			arrows: false,
 			asNavFor: '.centerlife-slider',
 			focusOnSelect: true,
 });
+
+	$('.care__item').hover(function() {
+			$(this).find('.care__img svg').addClass('animate__animated animate__zoomIn');
+	}, function() {
+			$(this).find('.care__img svg').removeClass('animate__animated animate__zoomIn');
+	});
 
 });
