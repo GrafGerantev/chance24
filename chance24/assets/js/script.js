@@ -10,11 +10,22 @@ $(function () {
 
 	});
 
+    $("a[href^='#']").on('click', function () {
+       const _href = $(this).attr("href");
+       $("html, body").animate({scrollTop: $(_href).offset().top+"px"});
+
+       return false;
+    });
+
 	$('[data-fancybox="gallery"]').fancybox({
 		// Options will go here
 	});
 
-/* 	$(window).on('scroll',function () {
+	$('[data-fancybox="licenses"]').fancybox({
+		// Options will go here
+	});
+
+	$(window).on('scroll',function () {
 
 
 			if ($(this).scrollTop() > 500) {
@@ -23,7 +34,7 @@ $(function () {
 			else {
 					$('.header').removeClass('header--fixed');
 			}
-	}); */
+	});
 
 
 	$('.appeal__item').hover(function() {
@@ -51,7 +62,10 @@ $(function () {
 			});
 	};
 
-	validateForms('#consultation-form');
+	validateForms('#consultation1');
+	validateForms('#consultation2');
+	validateForms('#contacts-form');
+	validateForms('#modal-form');
 
 	$('input[name=phone]').mask("+7 (999) 999-99-99");
 
@@ -117,5 +131,43 @@ $(function () {
 	}, function() {
 			$(this).find('.care__img svg').removeClass('animate__animated animate__zoomIn');
 	});
+
+/* 	$('.questions__title').on('click', function(){
+		$(this).toggleClass('questions__title--active');
+		$(this).next().slideToggle(300);
+
+}); */
+
+    $(".questions-accordion").accordionjs({
+
+        // The section open on first init. A number from 1 to X or false.(data-active-index)
+        activeIndex : false,
+    });
+
+   $('[data-modal=consultation]').on('click', function() {
+        $('.modal, .modal__dialog').fadeIn('slow');
+				document.body.style.overflow = 'hidden';
+    });
+    $('.modal__close').on('click', function() {
+        $('.modal, .modal__dialog').fadeOut('slow');
+				document.body.style.overflow = '';
+    });
+
+	$('form').submit(function(e) {
+        e.preventDefault();
+        $.ajax({
+            type: "POST",
+            url: "assets/mailer/smart.php",
+            data: $(this).serialize()
+        }).done(function () {
+            $(this).find("input").val("");
+            $('modal__dialog').fadeOut();
+            //$('.overlay, #thanks').fadeIn('slow');
+
+            $('form').trigger('reset');
+            $('form-modal').trigger('reset');
+        });
+        return false;
+    });
 
 });

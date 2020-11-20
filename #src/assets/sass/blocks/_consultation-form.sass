@@ -8,41 +8,7 @@
 	&-form
 		display: flex
 		justify-content: space-between
-		align-items: center
-		.error
-			border: 1px solid red
-		label.error
-			border: none
-			text-align: center
-			display: block
-			color: red
-			padding-top: 10px
-			position: absolute
-			bottom: -29px
-			left: 50%
-			transform: translateX(-50%)
-			width: 100%
-
-		&__wrap
-			max-width: 350px
-			width: 100%
-			position: relative
-
-		&__input
-			border: 1px solid $bg-color-blue
-			display: block
-			width: 100%
-			padding: 0 10px 0 65px
-			color: #333
-			font-size: 15px
-			background: $bg-color-white
-			font-weight: 400
-			height: 58px
-			border-radius: 35px
-			outline: none
-		button
-			max-width: 350px
-			width: 100%
+		align-items: baseline
 	&__text
 		font-size: 22px
 		font-weight: 300
@@ -61,11 +27,50 @@
 			color: #23527c
 			text-decoration: underline
 
-.consultation-form__wrap-name, .consultation-form__wrap-phone
+.form
+	.error
+		border: 1px solid red
+	label.error
+		border: none
+		text-align: center
+		display: block
+		color: red
+		padding-top: 10px
+		//position: absolute
+		bottom: -29px
+		left: 50%
+		//transform: translateX(-50%)
+		width: 100%
+
+	&__wrap
+		max-width: 350px
+		width: 100%
+		position: relative
+		margin: 0 auto 18px auto
+
+	&__input
+		border: 1px solid $bg-color-blue
+		display: block
+		width: 100%
+		padding: 0 10px 0 65px
+		color: #333
+		font-size: 15px
+		background: $bg-color-white
+		font-weight: 400
+		height: 58px
+		border-radius: 35px
+		outline: none
+	button
+		max-width: 350px
+		width: 100%
+		margin-left: auto
+		margin-right: auto
+
+.form__wrap-name, .form__wrap-phone
 	position: relative
 
-.consultation-form__wrap-name,
-.consultation-form__wrap-phone
+.form__wrap-name,
+.form__wrap-phone
 	&::before
 		content: ""
 		width: 14px
@@ -74,9 +79,23 @@
 		position: absolute
 		top: 23px
 		left: 25px
-.consultation-form__wrap-name
+.form__wrap-name
 	&::before
 		background: url('../images/icons/icon-user.svg') no-repeat
-.consultation-form__wrap-phone
+.form__wrap-phone
 	&::before
 		background: url('../images/icons/icon-phone.svg') no-repeat
+
+.modal-form
+	&__title
+		font-size: 24px
+		font-weight: 700
+		padding-bottom: 18px
+		text-transform: uppercase
+		text-align: center
+	&__subtitle
+		font-size: 18px
+		font-weight: 300
+		color: #14355d
+		margin-bottom: 20px
+		text-align: center

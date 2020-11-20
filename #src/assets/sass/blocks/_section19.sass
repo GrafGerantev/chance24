@@ -1,0 +1,37 @@
+.section19
+	padding: 62px 0 40px
+
+.questions
+	&__inner
+		max-width: 920px
+		width: 100%
+		margin: 0 auto
+	&__title
+		position: relative
+		display: block
+		padding: 12px 50px
+		text-decoration: underline
+		font-size: 22px
+		color: $bg-color-blue--dark
+		cursor: pointer
+
+		&::after
+			content: ""
+			position: absolute
+			background: url('../images/icons/icon-chevron-right-blue.svg') no-repeat
+			left: 0
+			top: 14px
+			width: 13px
+			height: 23px
+			transition: all .1s linear
+
+	&-content
+		padding: 15px 50px
+		font-size: 16px
+		font-weight: 300
+		display: none
+		background-color: #efefef
+
+.questions__title--active
+	&::after
+		transform: rotate(90deg)

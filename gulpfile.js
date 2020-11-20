@@ -8,7 +8,7 @@ let path = {
 		js: project_folder + "/assets/js/",
 		img: project_folder + "/assets/images/",
 		fonts: project_folder + "/assets/fonts/",
-		php: project_folder + "/assets/php/",
+		php: project_folder + "/assets/mailer/",
 		//php: project_folder + "/",
 	},
 	src: {
@@ -17,7 +17,7 @@ let path = {
 		js: source_folder + "/assets/js/script.js",
 		img: source_folder + "/assets/images/**/*.{jpg,png,svg,gif,ico,webp}",
 		fonts: source_folder + "/assets/fonts/*",
-		php: source_folder + "/assets/php/**/*.php",
+		php: source_folder + "/assets/mailer/**/*.php",
 		//php: source_folder + "/*.php",
 
 
@@ -27,6 +27,7 @@ let path = {
 		css: source_folder + "/assets/sass/**/*.sass",
 		js: source_folder + "/assets/js/**/*.js",
 		img: source_folder + "/assets/images/**/*.{jpg,png,svg,gif,ico,webp}",
+		php: source_folder + "/assets/mailer/**/*.php",
 	},
 	clean: "./" + project_folder + "/",
 
@@ -118,6 +119,7 @@ function cssConcat() {
 			'#src/assets/css/font.css',
 			'#src/assets/css/slick.css',
 			'#src/assets/css/slick-theme.css',
+			/* 'node_modules/accordionjs/accordion.css', */
 			//'node_modules/selectize/dist/css/selectize.default.css',
 			//'src/assets/css/tooltipster-sideTip-borderless.min.css',
 			//'src/assets/css/tooltipster.bundle.min.css',
@@ -159,6 +161,7 @@ function jsConcat() {
 			'#src/assets/js/jquery.min.js',
 			'#src/assets/js/jquery.fancybox.min.js',
 			'#src/assets/js/jquery.maskedinput.min.js',
+			'node_modules/accordionjs/accordion.js',
 			//'node_modules/selectize/dist/js/standalone/selectize.js',
 			//'src/assets/js/tooltipster.bundle.min.js',
 			//'node_modules/jquery-validation/dist/jquery.validate.min.js',
@@ -211,6 +214,7 @@ function watchFiles(params) {
 	gulp.watch([path.watch.css], css);
 	gulp.watch([path.watch.js], js);
 	gulp.watch([path.watch.img], images);
+	gulp.watch([path.watch.php], php);
 }
 
 function fonts() {
@@ -247,7 +251,7 @@ function clean(params) {
 	return del(path.clean);
 }
 
-let build = gulp.series(clean, gulp.parallel(jsConcat, js, cssConcat, css, html, images, fonts /*php*/ ));
+let build = gulp.series(clean, gulp.parallel(jsConcat, js, cssConcat, css, html, images, fonts, php ));
 let watch = gulp.parallel(build, watchFiles, browserSync);
 
 exports.php = php;

@@ -9,6 +9,7 @@
   "author": "mr.gerantev@yandex.ru",
   "license": "ISC",
   "devDependencies": {
+    "accordionjs": "^2.1.1",
     "animate.css": "^4.1.1",
     "browser-sync": "^2.26.7",
     "del": "^5.1.0",

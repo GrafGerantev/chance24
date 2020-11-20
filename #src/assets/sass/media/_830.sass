@@ -24,12 +24,17 @@
 	.consultation
 		&-form
 			flex-direction: column
-			button
-				max-width: 70%
-			&__wrap
-				max-width: 70%
-				&-phone
-					margin: 15px 0
+	.form
+		button
+			max-width: 70%
+		&__wrap
+			max-width: 70%
+
+	.modal-form
+		.form__wrap
+			max-width: 100%
+		button
+			max-width: 100%
 
 	.rehabilitation
 		&__inner
@@ -41,3 +46,14 @@
 		.video-reviews__item
 			margin-bottom: 30px
 			max-width: 80%
+
+	.footer
+		&__inner
+			text-align: center
+			display: block
+		&-content
+			margin: 0 auto 20px auto
+			&__item
+				border: none
+		&-btn
+			margin: 0 auto
