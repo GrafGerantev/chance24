@@ -170,4 +170,41 @@ $(function () {
         return false;
     });
 
+
+  function loadPlayer() {
+        if (typeof(YT) == 'undefined' || typeof(YT.Player) == 'undefined') {
+            var tag = document.createElement('script');
+            tag.src = "https://www.youtube.com/iframe_api";
+            var firstScriptTag = document.getElementsByTagName('script')[0];
+            firstScriptTag.parentNode.insertBefore(tag, firstScriptTag);
+
+            window.onYouTubePlayerAPIReady = function () {
+                onYouTubePlayer();
+            };
+        }
+    }
+
+    var player;
+    function onYouTubePlayer() {
+        player = new YT.Player('ytplayer', {
+            height: '360',
+            width: '640',
+            videoId: 'ZF_1vqGZgw0',
+            events: {
+                'onReady': onPlayerReady,
+            }
+        });
+    }
+
+    function onPlayerReady(event) {
+        event.target.playVideo();
+    }
+
+
+
+    $(function () {
+        loadPlayer();
+    })
+
 });
+
