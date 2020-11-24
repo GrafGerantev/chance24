@@ -12,11 +12,15 @@ button
 	margin: 0 auto
 	height: 48px
 	line-height: 46px
+	&:hover
+		background-color: lighten(#047aaf, 10%)
+		transition: all .3s linear
+
 .blue-btn
 	display: block
 
 	color: $bg-color-white
-	background-color: #047aaf
+	background-color: #058ac7
 	overflow: hidden
 	min-width: 190px
 	position: relative
@@ -32,20 +36,26 @@ button
 	height: 65px
 	top: 0
 	padding: 0 10px
-	&::after
-		content: ""
-		width: 100%
-		position: absolute
-		bottom: 4px
-		height: 100%
-		background-image: linear-gradient(to left,#0084c2 0,#31aad6 100%)
-		border-radius: inherit
-		z-index: -1
-		box-shadow: 0 5px 32px 8px rgba(11,123,171,.2)
-		left: 0
-		transition: .3s
-	&:hover::after
-		background-image: linear-gradient(to right,#0093d8 0,#4ac7f4 100%)
+	transition: all .3s linear
+	//&::after
+	//content: ""
+		//width: 100%
+		//position: absolute
+		//bottom: 4px
+		//height: 100%
+		//background-image: linear-gradient(to left,#0084c2 0,#31aad6 100%)
+		//border-radius: inherit
+		//z-index: -1
+		//box-shadow: 0 5px 32px 8px rgba(11,123,171,.2)
+		//left: 0
+		//transition: all .3s linear
+		//opacity: 1
+	//&:hover::after
+		//background-image: linear-gradient(to right,#0093d8 0,#4ac7f4 100%)
+	&:hover
+		box-shadow: 0 0 10px 0 #28b7fa, 0 0 20px 2px #28b7fa
+		//border: 1px solid #28b7fa
+		//transition: all .3s linear
 	img
 		display: inline-block
 		width: 22px
@@ -69,7 +79,22 @@ button
 	color: $bg-color-white
 	border: 1px solid #38baed
 	background: 0 0
+	transform: scale(1)
 	line-height: 42px
 	width: 190px
 	height: 48px
 	border-radius: 35px
+	position: relative
+	transition: all .3s linear
+	&::after
+		position: absolute
+		transition: .3s
+		content: ''
+		width: 0
+		left: 50%
+		bottom: 0
+		height: 3px
+		background: #f7f7f7
+
+.footer-btn:hover
+	transform: scale(1.2)

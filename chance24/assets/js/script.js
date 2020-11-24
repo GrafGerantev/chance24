@@ -45,7 +45,24 @@ $(function () {
 
 
 	function validateForms(form){
-			$(form).validate({
+		$(form).validate({
+				rules: {
+						name: {
+								required: true
+						},
+						phone: "required",
+				},
+				messages: {
+						name: {
+								required: "Пожалуйста, введите свое имя",
+								minlength: jQuery.validator.format("Введите {0} символа!")
+							},
+						phone: "Пожалуйста, введите свой номер телефона",
+				}
+		});
+	}
+
+	let validator = $('#modal-form').validate({
 					rules: {
 							name: {
 									required: true
@@ -60,12 +77,39 @@ $(function () {
 							phone: "Пожалуйста, введите свой номер телефона",
 					}
 			});
-	};
+
 
 	validateForms('#consultation1');
 	validateForms('#consultation2');
 	validateForms('#contacts-form');
-	validateForms('#modal-form');
+
+   $('[data-modal=consultation]').on('click', function() {
+        $('.modal, .modal__dialog').fadeIn('slow');
+				document.body.style.overflow = 'hidden';
+    });
+    $('.modal__close').on('click', function() {
+        $('.modal, .modal__dialog').fadeOut('slow');
+				document.body.style.overflow = '';
+				validator.resetForm();
+
+    });
+
+	$('form').submit(function(e) {
+        e.preventDefault();
+        $.ajax({
+            type: "POST",
+            url: "assets/mailer/smart.php",
+            data: $(this).serialize()
+        }).done(function () {
+            $(this).find("input").val("");
+            $('modal__dialog').fadeOut();
+            //$('.overlay, #thanks').fadeIn('slow');
+
+            $('form').trigger('reset');
+            $('form-modal').trigger('reset');
+        });
+        return false;
+    });
 
 	$('input[name=phone]').mask("+7 (999) 999-99-99");
 
@@ -144,66 +188,7 @@ $(function () {
         activeIndex : false,
     });
 
-   $('[data-modal=consultation]').on('click', function() {
-        $('.modal, .modal__dialog').fadeIn('slow');
-				document.body.style.overflow = 'hidden';
-    });
-    $('.modal__close').on('click', function() {
-        $('.modal, .modal__dialog').fadeOut('slow');
-				document.body.style.overflow = '';
-    });
-
-	$('form').submit(function(e) {
-        e.preventDefault();
-        $.ajax({
-            type: "POST",
-            url: "assets/mailer/smart.php",
-            data: $(this).serialize()
-        }).done(function () {
-            $(this).find("input").val("");
-            $('modal__dialog').fadeOut();
-            //$('.overlay, #thanks').fadeIn('slow');
-
-            $('form').trigger('reset');
-            $('form-modal').trigger('reset');
-        });
-        return false;
-    });
 
 
-  function loadPlayer() {
-        if (typeof(YT) == 'undefined' || typeof(YT.Player) == 'undefined') {
-            var tag = document.createElement('script');
-            tag.src = "https://www.youtube.com/iframe_api";
-            var firstScriptTag = document.getElementsByTagName('script')[0];
-            firstScriptTag.parentNode.insertBefore(tag, firstScriptTag);
-
-            window.onYouTubePlayerAPIReady = function () {
-                onYouTubePlayer();
-            };
-        }
-    }
-
-    var player;
-    function onYouTubePlayer() {
-        player = new YT.Player('ytplayer', {
-            height: '360',
-            width: '640',
-            videoId: 'ZF_1vqGZgw0',
-            events: {
-                'onReady': onPlayerReady,
-            }
-        });
-    }
-
-    function onPlayerReady(event) {
-        event.target.playVideo();
-    }
-
-
-
-    $(function () {
-        loadPlayer();
-    })
 
 });
