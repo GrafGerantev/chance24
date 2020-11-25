@@ -8827,6 +8827,10 @@ li {
   .footer-btn {
     margin: 0 auto;
   }
+
+  .footer .header__logo {
+    margin: 0 auto;
+  }
 }
 
 @media (max-width: 784px) {
