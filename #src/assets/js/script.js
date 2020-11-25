@@ -12,8 +12,14 @@ $(function () {
 
     $("a[href^='#']").on('click', function () {
        const _href = $(this).attr("href");
-       $("html, body").animate({scrollTop: $(_href).offset().top+"px"});
-
+      $("html, body").animate({scrollTop: $(_href).offset().top+"px"});
+			$('.menu__btn').removeClass('menu__btn--active');
+			$('.header-menu__inner').removeClass('header-menu__inner--active');
+			if($('.menu__btn').hasClass('menu__btn--active')) {
+					$("html,body").css("overflow","hidden");
+			} else {
+			$("html,body").css("overflow","visible");
+			}
        return false;
     });
 
