@@ -108,11 +108,12 @@ $(function () {
             data: $(this).serialize()
         }).done(function () {
             $(this).find("input").val("");
-            $('modal__dialog').fadeOut();
-            //$('.overlay, #thanks').fadeIn('slow');
+           	$('.modal, .modal__dialog').fadeOut('slow');
+						document.body.style.overflow = '';
+						validator.resetForm();
 
             $('form').trigger('reset');
-            $('form-modal').trigger('reset');
+            $('.form-modal').trigger('reset');
         });
         return false;
     });
