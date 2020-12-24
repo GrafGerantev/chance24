@@ -9020,11 +9020,11 @@ li {
   }
 
   .macbook-bg {
-    max-width: 400px;
+    max-width: 100%;
   }
 
   .mac-video {
-    width: 293px;
+    max-width: 100%;
     height: 181px;
   }
 
