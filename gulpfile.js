@@ -172,6 +172,7 @@ function jsConcat() {
 			//'src/assets/js/jquery.tiltedpage-scroll.min.js',
 			'#src/assets/js/slick.js', // Берем jQuery
 			'node_modules/jquery-validation/dist/jquery.validate.min.js',
+			'node_modules/wow.js/dist/wow.min.js',
 			// Берем Magnific Popup
 			//'node_modules/@fancyapps/fancybox/dist/jquery.fancybox.js',
 			//'node_modules/jquery.waitforimages/dist/jquery.waitforimages.js',
