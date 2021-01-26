@@ -6185,7 +6185,7 @@ div {
   display: none;
 }
 
-.menu-line {
+.menu__btn-line {
   width: 34px;
   height: 3px;
   background: #2F3035;
@@ -6439,10 +6439,13 @@ button {
   text-transform: uppercase;
 }
 
+.intro-container .consultation__phone {
+  margin-bottom: 10px;
+}
+
 .intro__subtitle {
   color: #0a9adc;
   font-size: 32px;
-  margin-bottom: 22px;
   line-height: 49px;
 }
 
@@ -8472,7 +8475,7 @@ li {
 .modal__dialog {
   max-width: 380px;
   width: 100%;
-  position: relative;
+  position: absolute;
   top: 50%;
   left: 50%;
   -webkit-transform: translate(-50%, -50%);
@@ -8505,6 +8508,11 @@ li {
 
 .modal button {
   line-height: 1;
+}
+
+#modal-form,
+#modal-thanks {
+  display: none;
 }
 
 .macbook-bg {
@@ -8755,7 +8763,6 @@ li {
 
   .intro__subtitle {
     font-size: 30px;
-    margin-bottom: 12px;
   }
 
   .content__items {
@@ -9009,8 +9016,12 @@ li {
 }
 
 @media (max-width: 523px) {
-  .intro__subtitle {
-    font-size: 16px;
+  .header {
+    padding: 6px;
+  }
+
+  .header__logo {
+    max-width: 40px;
   }
 
   .line__bg {
@@ -9133,7 +9144,7 @@ li {
   }
 
   .intro__subtitle {
-    font-size: 12px;
+    font-size: 16px;
     line-height: 18px;
   }
 

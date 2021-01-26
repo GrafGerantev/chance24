@@ -194,3 +194,8 @@ $(function () {
         activeIndex : false,
     });
 });
+
+fetch('http://getpost.itgid.info/index2.php')
+	.then(data => {
+			console.log(data);
+});

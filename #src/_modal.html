@@ -1,8 +1,8 @@
 	<div class="modal">
-		<div class="modal__dialog">
+		<div class="modal__dialog" id="modal-form">
 			<div class="modal__content">
+				<div data-close class="modal__close">&times;</div>
 				<form action="assets/mailer/smart.php" id="modal-form" class="form modal-form">
-					<div data-close class="modal__close">&times;</div>
 					<h3 class="modal-form__title">Оставьте заявку</h3>
 					<div class="modal-form__subtitle">и получите бесплатную консультацию специалиста</div>
 					<div class="form__wrap form__wrap-name">
@@ -15,6 +15,13 @@
 						<img src="assets/images/icons/icon-chevron-right.svg" alt="chevron">
 					</button>
 				</form>
+			</div>
+		</div>
+		<div class="modal__dialog" id="modal-thanks">
+			<div class="modal__content">
+				<div data-close class="modal__close">&times;</div>
+				<h3 class="modal-form__title">Спасибо за заявку!</h3>
+				<div class="modal-form__subtitle">Мы свяжемся с вами в ближайшее время</div>
 			</div>
 		</div>
 	</div>
