@@ -6441,6 +6441,15 @@ button {
 
 .intro-container .consultation__phone {
   margin-bottom: 10px;
+  color: #0a9adc;
+}
+
+.intro__descr {
+  font-size: 32px;
+  line-height: 1.2;
+  color: #0a9adc;
+  margin-bottom: 16px;
+  font-weight: 700;
 }
 
 .intro__subtitle {
@@ -8761,7 +8770,8 @@ li {
     margin-bottom: 10px;
   }
 
-  .intro__subtitle {
+  .intro__subtitle,
+  .intro__descr {
     font-size: 30px;
   }
 
@@ -8854,7 +8864,8 @@ li {
 }
 
 @media (max-width: 784px) {
-  .intro__subtitle {
+  .intro__subtitle,
+  .intro__descr {
     font-size: 26px;
   }
 }
@@ -8912,7 +8923,8 @@ li {
 }
 
 @media (max-width: 660px) {
-  .intro__subtitle {
+  .intro__subtitle,
+  .intro__descr {
     font-size: 20px;
   }
 
@@ -9143,9 +9155,11 @@ li {
     font-size: 19px;
   }
 
-  .intro__subtitle {
-    font-size: 16px;
-    line-height: 18px;
+  .intro__subtitle,
+  .intro__descr {
+    font-size: 18px;
+    line-height: 24px;
+    text-align: center;
   }
 
   .intro__appeal {
