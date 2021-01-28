@@ -6166,15 +6166,15 @@ div {
 
 .header__callback-phone {
   font-size: 26px;
-  font-weight: 500;
+  font-weight: 700;
   color: #337ab7;
   margin-bottom: 10px;
 }
 
 .header__callback-consultation {
-  color: #0093d8;
+  color: #b22222;
   font-size: 16px;
-  font-weight: 500;
+  font-weight: 700;
   margin-bottom: 10px;
 }
 
@@ -6507,6 +6507,10 @@ li {
   list-style-type: none;
 }
 
+picture {
+  display: inline-block;
+}
+
 .line__bg {
   position: relative;
   padding: 20px 15px 24px;
@@ -6824,10 +6828,15 @@ li {
 
 .modal-form__subtitle {
   font-size: 18px;
-  font-weight: 300;
+  font-weight: 700;
   color: #14355d;
   margin-bottom: 20px;
   text-align: center;
+}
+
+.modal-form__subtitle--red {
+  margin-bottom: 16px;
+  color: #b22222;
 }
 
 .section1 {
@@ -8472,7 +8481,7 @@ li {
 }
 
 .modal {
-  display: none;
+  display: тnone;
   position: fixed;
   z-index: 101;
   width: 100%;
@@ -8986,10 +8995,6 @@ li {
     font-size: 14px;
   }
 
-  .header__callback {
-    display: none;
-  }
-
   .comfortlive__title {
     margin-bottom: 30px;
   }
@@ -9151,6 +9156,24 @@ li {
 }
 
 @media (max-width: 420px) {
+  .header__inner {
+    -ms-flex-wrap: nowrap;
+        flex-wrap: nowrap;
+  }
+
+  .header__callback-phone {
+    font-size: 18px;
+  }
+
+  .header__callback-consultation {
+    font-size: 12px;
+    line-height: 12px;
+  }
+
+  .intro {
+    padding-top: 84px;
+  }
+
   .intro__title {
     font-size: 19px;
   }
