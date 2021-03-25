@@ -1,28 +1,73 @@
-	<div class="modal">
-		<div class="modal__dialog" id="modal-form">
-			<div class="modal__content">
-				<div data-close class="modal__close">&times;</div>
-				<form action="assets/mailer/smart.php" id="modal-form" class="form modal-form">
-					<h3 class="modal-form__title">Оставьте заявку</h3>
-					<div class="modal-form__subtitle">и получите бесплатную консультацию специалиста</div>
-					<div class="modal-form__subtitle modal-form__subtitle--red">Быстро. Эффективно. Анонимно</div>
-					<div class="form__wrap form__wrap-name">
-						<input type="text" name="name" required placeholder="Ваше имя" class="form__input">
-					</div>
-					<div class="form__wrap form__wrap-phone">
-						<input name="phone" required placeholder="Ваш телефон" class="form__input">
-					</div>
-					<button type="submit" class="blue-btn main-btn">Заказать звонок
-						<img src="assets/images/icons/icon-chevron-right.svg" alt="chevron">
-					</button>
-				</form>
-			</div>
+<div class="modal">
+	<div class="modal__dialog" id="modal-form">
+		<div class="modal__content">
+			<div data-close class="modal__close">&times;</div>
+			<form action="assets/mailer/smart.php" id="modal-form" class="form modal-form">
+				<h3 class="modal-form__title">Оставьте заявку</h3>
+				<div class="modal-form__subtitle">и получите бесплатную консультацию специалиста</div>
+				<div class="modal-form__subtitle modal-form__subtitle--red">Быстро. Эффективно. Анонимно</div>
+				<div class="form__wrap form__wrap-name">
+					<input type="text" name="name" required placeholder="Ваше имя" class="form__input">
+				</div>
+				<div class="form__wrap form__wrap-phone">
+					<input name="phone" required placeholder="Ваш телефон" class="form__input">
+				</div>
+				<button type="submit" class="blue-btn main-btn">Заказать звонок
+					<img src="assets/images/icons/icon-chevron-right.svg" alt="chevron">
+				</button>
+			</form>
 		</div>
-		<div class="modal__dialog" id="modal-thanks">
-			<div class="modal__content">
-				<div data-close class="modal__close">&times;</div>
-				<h3 class="modal-form__title">Спасибо за заявку!</h3>
-				<div class="modal-form__subtitle">Мы свяжемся с вами в ближайшее время</div>
+	</div>
+	<div class="modal__dialog" id="modal-thanks">
+		<div class="modal__content">
+			<div data-close class="modal__close">&times;</div>
+			<h3 class="modal-form__title">Спасибо за заявку!</h3>
+			<div class="modal-form__subtitle">Мы свяжемся с вами в ближайшее время</div>
+		</div>
+	</div>
+</div>
+
+
+<div class="modal-select__city">
+	<div class="select-city" id="modal-cities">
+		<div class="modal__content select-city__content">
+			<div class="modal__close">&times;</div>
+			<div class="select-city__header">
+				<h3 class="modal-form__title select-city__title">Выберите ваш город</h3>
+			</div>
+			<div class="select-city__body">
+				<div class="select-city__form">
+					<input type="text" name="city" autocomplete="off" placeholder="Выберите ваш город" class="select-city__input">
+				</div>
+				<div class="select-city__form">
+					<ul class="select-city__list">
+						<li class="select-city__item">
+							<a href="#" class="select-city__link">Казань, Татарстан республика</a>
+						</li>
+						<li class="select-city__item">
+							<a href="#" class="select-city__link">Саратов, Саратовская область</a>
+						</li>
+						<li class="select-city__item">
+							<a href="#" class="select-city__link">Уфа, Башкортастан республика</a>
+						</li>
+						<li class="select-city__item">
+							<a href="#" class="select-city__link">Омск, Омская область</a>
+						</li>
+						<li class="select-city__item">
+							<a href="#" class="select-city__link">Казань, Татарстан республика</a>
+						</li>
+						<li class="select-city__item">
+							<a href="#" class="select-city__link">Саратов, Саратовская область</a>
+						</li>
+						<li class="select-city__item">
+							<a href="#" class="select-city__link">Уфа, Башкортастан республика</a>
+						</li>
+						<li class="select-city__item">
+							<a href="#" class="select-city__link">Омск, Омская область</a>
+						</li>
+					</ul>
+				</div>
 			</div>
 		</div>
 	</div>
+</div>

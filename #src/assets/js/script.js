@@ -195,7 +195,94 @@ $(function () {
     });
 });
 
-fetch('http://getpost.itgid.info/index2.php')
-	.then(data => {
-			console.log(data);
+//СКРИПТЫ JS
+
+let cityBtns = document.querySelectorAll('.city-detect__btn'),
+		modal = document.querySelector('.modal-select__city'),
+		modalDialog = document.querySelector('.select-city'),
+		body = document.querySelector('body'),
+		closeSelectCity = document.querySelector('.modal-select__city .modal__close');
+
+/* console.log(closeSelectCity); */
+function modalCityDetectClose() {
+	let cityDetect = document.querySelector('.city-detect');
+
+	if (!cityDetect.classList.contains('hide')) {
+		cityDetect.classList.add('hide');
+	}
+}
+
+function fadeIn(modal, modalDialog) {  
+	let opacity = 0.01; 
+	modal.style.display = "block";
+	modalDialog.style.display = "block";
+	body.style.overflow = 'hidden';
+	let timer = setInterval(function() {  
+		if(opacity >= 1) {		
+			clearInterval(timer);
+		}
+		modal.style.opacity = opacity;
+		modalDialog.style.opacity = opacity;
+		opacity += opacity * 0.1;
+	}, 10);
+	
+}
+
+function fadeOut(modal, modalDialog) {
+	let opacity = 1;
+	let timer = setInterval(function() {
+		if(opacity <= 0.1) {
+			clearInterval(timer);
+			modal.style.display = '';
+			modalDialog.style.display = '';
+			body.style.overflow = '';
+		}
+		modal.style.opacity = opacity;
+		modalDialog.style.opacity = opacity;
+		opacity -= opacity * 0.1;
+	}, 10);
+
+}
+
+function modalSelectCities() {
+	fadeIn(modal, modalDialog);
+}
+
+function closeModalSelectCities() {
+		fadeOut(modal, modalDialog);
+}
+
+
+closeSelectCity.addEventListener('click', function() {
+	if (closeSelectCity.parentNode.classList.contains('select-city__content')) {
+		closeModalSelectCities();
+	}
 });
+
+
+
+// Проходим по массиву
+cityBtns.forEach(btn => {
+  // Вешаем событие клик
+  btn.addEventListener('click', function(e) {
+		if (e.target.classList.contains('city-detect__yes')) {
+			modalCityDetectClose();
+		}
+		else if (e.target.classList.contains('city-detect__no')) {
+			 modalSelectCities();
+		}
+  });
+});
+
+
+/* // Проходим по массиву Только for
+/* for(let i = 0; i < cityBtns.length; i++) {
+	cityBtns[i].addEventListener('click', e => {
+		if (e.target.classList.contains('city-detect__yes')) {
+			modalCityDetectClose();
+		}
+		else if (e.target.classList.contains('city-detect__no')) {
+			console.log('Hi');
+		}
+	});
+} */

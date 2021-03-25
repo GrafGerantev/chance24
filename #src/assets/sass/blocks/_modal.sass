@@ -1,5 +1,5 @@
 .modal
-	display: тnone
+	display: none
 	position: fixed
 	z-index: 101
 	width: 100%
@@ -39,3 +39,91 @@
 
 #modal-form, #modal-thanks
 	display: none
+
+.city-detect
+	width: 200px
+	padding: 10px 20px 8px 20px
+	border-radius: 10px
+	color: $bg-color-blue--dark
+	background-color: rgba(#f2f2f2, .9)
+	font-weight: 700
+	text-align: center
+	line-height: 18px
+	position: absolute
+	z-index: 10
+	left: 30%
+	bottom: -30px
+	&::before
+		content: ''
+		border: 18px solid transparent
+		border-right: 20px solid rgba(#f2f2f2, .9)
+		position: absolute
+		top: calc(50% - 18px)
+		left: -38px
+
+	&__title
+		margin-bottom: 8px
+	&__buttons
+		display: flex
+	&__btn
+		width: 66px
+		height: 32px
+		line-height: 32px
+		font-size: 14px
+		background-color: #d4d5d6
+		border-radius: 6px
+		transition: all .25s
+		margin: 0 7px
+		font-weight: 500
+		color: $bg-color-blue--dark
+		&:hover
+			background-color: lighten(#d4d5d6, 5%)
+	&.hide
+		display: none
+
+.modal-select
+	&__city
+		display: none
+		position: fixed
+		z-index: 101
+		width: 100%
+		height: 100%
+		top: 0
+		background-color: rgba(0,0,0, .56)
+
+.select-city
+	max-width: 600px
+	width: 100%
+	position: absolute
+	top: 50%
+	left: 50%
+	transform: translate(-50%, -50%)
+	&__form
+		margin-bottom: 12px
+	&__input
+		font-size: 20px
+		color: #4e4e4e
+		padding: 10px 25px 12px 25px
+		width: 100%
+		border: 1px solid #e7e7e7
+		border-radius: 10px
+		height: auto
+		outline: none
+		box-shadow: 0px 3px 7px 0px rgba(211, 211, 211, 0.75)
+	&__list
+		border: 1px solid #ececec
+		border-radius: 10px
+		overflow: hidden
+		height: 225px
+		overflow-y: scroll
+	&__item
+		padding: 12.5px 25px
+		color: #4e4e4e
+		font-size: 15px
+		text-decoration: none
+		border-bottom: 1px solid #ececec
+		border-right: 1px solid #ececec
+		transition: all linear .2s
+		&:hover
+			background-color: #2ea2de
+			color: $bg-color-white
