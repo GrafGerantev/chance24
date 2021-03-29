@@ -188,22 +188,27 @@ $(function () {
 
 }); */
 
-    $(".questions-accordion").accordionjs({
+	$(".questions-accordion").accordionjs({
 
         // The section open on first init. A number from 1 to X or false.(data-active-index)
         activeIndex : false,
-    });
+	});
+	$('.questions-accordion .questions__item:first').addClass('acc_active');
+	$('.questions__item:first .acc_content').css("display", "block");
 });
 
 //СКРИПТЫ JS
-
-let cityBtns = document.querySelectorAll('.city-detect__btn'),
+ let cityBtns = document.querySelectorAll('.city-detect__btn'),
+		introCity = document.querySelector('.intro-city'),
 		modal = document.querySelector('.modal-select__city'),
 		modalDialog = document.querySelector('.select-city'),
 		body = document.querySelector('body'),
-		closeSelectCity = document.querySelector('.modal-select__city .modal__close');
+		closeSelectCity = document.querySelector('.modal-select__city .modal__close'),
+		cityItems = document.querySelectorAll('.select-city__item'),
+		cityLink = document.querySelectorAll('.select-city__link');
 
-/* console.log(closeSelectCity); */
+
+ console.log(closeSelectCity); 
 function modalCityDetectClose() {
 	let cityDetect = document.querySelector('.city-detect');
 
@@ -212,7 +217,10 @@ function modalCityDetectClose() {
 	}
 }
 
+
+
 function fadeIn(modal, modalDialog) {  
+	modalCityDetectClose();
 	let opacity = 0.01; 
 	modal.style.display = "block";
 	modalDialog.style.display = "block";
@@ -252,13 +260,16 @@ function closeModalSelectCities() {
 		fadeOut(modal, modalDialog);
 }
 
+introCity.addEventListener('click', function(){
+	modalCityDetectClose();
+	modalSelectCities();
+});
 
 closeSelectCity.addEventListener('click', function() {
 	if (closeSelectCity.parentNode.classList.contains('select-city__content')) {
 		closeModalSelectCities();
 	}
 });
-
 
 
 // Проходим по массиву
@@ -270,10 +281,24 @@ cityBtns.forEach(btn => {
 		}
 		else if (e.target.classList.contains('city-detect__no')) {
 			 modalSelectCities();
+
 		}
   });
 });
 
+cityItems.forEach(item => {
+	item.addEventListener('click', function(e){
+		let target = e.target,
+				cityOld,
+				cityNew;
+		cityOld = target.textContent;
+		cityNew = cityOld.split(',');
+		for (let i = 0; i < cityNew.length; i++) {
+			introCity.innerHTML = cityNew[0];
+			closeModalSelectCities();
+		}
+	});
+});
 
 /* // Проходим по массиву Только for
 /* for(let i = 0; i < cityBtns.length; i++) {
@@ -286,3 +311,4 @@ cityBtns.forEach(btn => {
 		}
 	});
 } */
+

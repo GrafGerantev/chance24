@@ -6438,13 +6438,29 @@ button {
   font-family: "DaysSans-Black", sans-serif;
   font-weight: 900;
   max-width: 953px;
-  width: 100%;
   letter-spacing: 2px;
   text-transform: uppercase;
 }
 
 .intro__title--color {
   color: #b22222;
+  padding-bottom: 5px;
+  position: relative;
+  display: inline-block;
+}
+
+.intro__title--color::after {
+  content: '';
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  height: 4px;
+  background-color: #b22222;
+}
+
+.intro-city {
+  cursor: pointer;
 }
 
 .intro-container .consultation__phone {
@@ -8601,10 +8617,10 @@ picture {
 
 .modal-select__city {
   display: none;
-  position: fixed;
   z-index: 101;
   width: 100%;
   height: 100%;
+  position: fixed;
   top: 0;
   background-color: rgba(0, 0, 0, 0.56);
 }
@@ -8618,6 +8634,7 @@ picture {
   -webkit-transform: translate(-50%, -50%);
       -ms-transform: translate(-50%, -50%);
           transform: translate(-50%, -50%);
+  z-index: 102;
 }
 
 .select-city__form {
@@ -8655,11 +8672,16 @@ picture {
   -webkit-transition: all linear .2s;
   -o-transition: all linear .2s;
   transition: all linear .2s;
+  cursor: pointer;
 }
 
 .select-city__item:hover {
   background-color: #2ea2de;
   color: #ffffff;
+}
+
+.select-city__link {
+  cursor: pointer;
 }
 
 .macbook-bg {

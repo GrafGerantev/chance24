@@ -81,15 +81,14 @@
 	&.hide
 		display: none
 
-.modal-select
-	&__city
-		display: none
-		position: fixed
-		z-index: 101
-		width: 100%
-		height: 100%
-		top: 0
-		background-color: rgba(0,0,0, .56)
+.modal-select__city
+	display: none
+	z-index: 101
+	width: 100%
+	height: 100%
+	position: fixed
+	top: 0
+	background-color: rgba(0,0,0, .56)
 
 .select-city
 	max-width: 600px
@@ -98,6 +97,7 @@
 	top: 50%
 	left: 50%
 	transform: translate(-50%, -50%)
+	z-index: 102
 	&__form
 		margin-bottom: 12px
 	&__input
@@ -124,6 +124,9 @@
 		border-bottom: 1px solid #ececec
 		border-right: 1px solid #ececec
 		transition: all linear .2s
+		cursor: pointer
 		&:hover
 			background-color: #2ea2de
 			color: $bg-color-white
+	&__link
+		cursor: pointer
